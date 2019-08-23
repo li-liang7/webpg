@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{text-align: center;}
+		canvas{background: grey;}
+	</style>
+</head>
+<body>
+
+	<canvas width="500" height="500" id="cs">
+		浏览器不支持
+	</canvas>
+	<script type="text/javascript">
+		var cs = document.getElementById("cs");
+		var ctx = cs.getContext("2d");
+		var p3= new Image();
+		p3.src = "images/mind.jpg"
+		p3.onload = function(){
+			ctx.drawImage(p3,0,0,500,400);
+		}
+	</script>
+</body>
+</html>

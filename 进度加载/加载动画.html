@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, infinite-scale=1.0, maximum-scale=1.0, minmimum-scale=1.0">
+	<meta charset="utf-8">
+	<title>Loading</title>
+	<style type="text/css">
+			@Keyframes loading{
+			from{
+				transform: scale(1,1);
+			}
+
+
+			to{
+				transform: scale(1,0.5)
+			}
+
+		}
+		.con{
+			width: 300px;
+			height: 158px;
+			border: 1px solid #000;
+			margin: 150px auto 0;
+
+		}
+		.con div{
+			width: 30px;
+			height: 100px;
+			float: left;
+			margin: 15px;
+			border-radius: 15px;
+			animation: loading 500ms ease infinite alternate;
+		}
+		.con div:nth-child(1){
+			background-color: red;
+		}
+		.con div:nth-child(2){
+			background-color: green; 
+			animation-delay: 100ms;
+		}
+		.con div:nth-child(3){
+			background-color: pink;
+			animation-delay: 200ms;
+		}
+		.con div:nth-child(4){
+			background-color: lightgreen;
+			animation-delay: 300ms;
+		}
+		.con div:nth-child(5){
+			background-color: lightblue;
+			animation-delay: 400ms;
+		}
+		.con p{
+			text-align: center;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<p>Loading...</p>
+	</div>
+</body>
+</html>

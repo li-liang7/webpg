@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>practice9正则表达式</title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+			var str ="ac ssd ac AC sdwf xxc";
+			console.log(str.search(/AC/));
+			console.log(str.match(/ac/ig));
+			var birth ="19970724";
+			var bc = birth.replace(/(\d{4})(\d{2})(\d{2})/,"$1年$2月$3日");
+			console.log(bc);
+
+			var strr ="i like test,eat,lol,drink, wow";
+			var arr =strr.match(/\b([a-z])[a-z]*\1\b/g);
+			console.log(arr);
+
+			reg = new RegExp("ac","ig");
+			console.log(reg.test(str));
+			console.log(reg.exec(str));
+			//test() 方法检索字符串中的指定值。返回值是 true 或 false。
+			//exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。
+
+			function fc(date){
+				y = date.getFullYear();
+
+				return y;
+			}
+			var now = new Date();
+			console.log(fc(now));
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

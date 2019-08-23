@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{text-align: center;}
+		canvas{background: grey;}
+	</style>
+</head>
+<body>
+	<canvas width="500" height="500" id="cs">
+		浏览器不支持
+	</canvas>
+	<br/>
+	<canvas width="500" height="500" id="cs2">
+		浏览器不支持
+	</canvas>
+	<script type="text/javascript">
+		var cs =document.getElementById("cs");
+		var ctx = cs.getContext("2d");
+		ctx.beginPath();
+		ctx.moveTo(50,350);
+		//画直线
+		ctx.lineTo(450,350);
+
+		//闭合
+		ctx.closePath();
+		//描边
+		ctx.lineWidth=1;
+		ctx.strokeStyle="red";
+		ctx.stroke();
+
+		//桥
+		var cs2=document.getElementById("cs2");
+		var ctx2= cs2.getContext("2d");
+		ctx2.beginPath();
+		ctx2.arc(250,200,25,0,2*Math.PI);
+		ctx2.stroke();
+	</script>
+</body>
+</html>

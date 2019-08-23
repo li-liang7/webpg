@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>practice</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<body>
+			<div class="container">
+				<h1>下拉菜单</h1>
+				<div class="dropdown">
+					<a href="#" data-qiehuan="xiala">产品大全</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+					</ul>
+					
+				</div>
+			</div>
+
+			<div class="container">
+				<h1>下拉菜单2</h1>
+				<div class="dropdown">
+					<a href="#" data-toggle="dropdown"
+					class="btn btn-default">产品大全
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-header"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li class="dropdown-header"><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+					</ul>
+					
+				</div>
+			</div>
+
+		</body>
+			<script src="js/jquery-1.12.4.js"></script>
+			<script src="js/bootstrap.js"></script>
+			<script>
+				$("[data-qiehuan='xiala']").click(function(e){
+					e.preventDefault();
+					$(this).siblings('.dropdown-menu').toggle();
+				});//不使用Bootstrap
+			</script>
+	</head>
+</html>

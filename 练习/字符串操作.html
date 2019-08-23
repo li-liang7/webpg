@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>practice4</title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+			function t(){
+				var arr=["z","c","d","q"];
+				var newarr = arr.slice(-2,-1);
+				console.log(newarr);
+			}
+			function t2(){
+				var arr2=["z","c","d","q"];
+				arr2.splice(2,1);
+				console.log(arr2);
+			}
+			function t3(){
+				var arr3=[1,4,5,2,32,54,74,12];
+				arr3.sort(function(a,b){return a-b;});//返回 >0 时交换位置
+				console.log(arr3);
+			}
+			function t4(){
+				var arr4=["z","c","d","q"];
+				console.log(arr4.toString());
+			}
+			function t5(){
+				var a=["z","c","d","q"];
+				var b=["s","g"];
+				console.log(a.concat(b));
+			}
+		</script>
+	</head>
+	<body>
+		<div id="text">text</div>
+		<button onclick="t()">slice test1</button>
+		<button onclick="t2()">splice test2</button>
+		<button onclick="t3()">sort test3</button>
+		<button onclick="t4()">tosSring test4</button>
+		<button onclick="t5()">concat test5</button>
+	</body>
+</html>
